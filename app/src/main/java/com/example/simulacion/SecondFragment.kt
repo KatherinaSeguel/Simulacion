@@ -27,8 +27,10 @@ class SecondFragment : Fragment() {
         mViewModel =
             ViewModelProvider(this).get(ProductsViewModel::class.java) //variable representa VM
         arguments?.let {
-            idProducts= it.getInt("id")   //se pasa la key de la clase
-            Log.d("LET",idtextView1.toString())
+
+            idProducts= it.getInt("id", 1)
+
+            Log.d("LET",idProducts.toString())
         }
     }
 
