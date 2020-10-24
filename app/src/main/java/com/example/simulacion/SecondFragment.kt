@@ -48,7 +48,7 @@ class SecondFragment : Fragment() {
         idProducts?.let {
             Log.d("ingresé al LET","")
             //la función debe devolver LiveData
-            mViewModel.getOneFrutoskByID(it).observe(viewLifecycleOwner, Observer{// getOneFrutoskByID método que debo crear y luego hacerlo en el viewmodel
+            mViewModel.getOneProductskByID(id).observe(viewLifecycleOwner, Observer{// getOneFrutoskByID método que debo crear y luego hacerlo en el viewmodel
 
                 Log.d("OBJ_LIVE",it.toString())
 

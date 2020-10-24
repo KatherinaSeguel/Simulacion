@@ -28,7 +28,7 @@ class ProductsViewModel (application: Application) : AndroidViewModel(applicatio
     //no lo había hecho
 //segundo fragmanto
     //Este elemento será observado por la vista cuando le pase el Id
-    fun getOneFrutoskByID(id:Int): LiveData<ProductsEntity> {
+    fun getOneProductskByID(id:Int): LiveData<ProductsEntity> {
         return mRepository.getOneProductsByID(id)
     }
 
