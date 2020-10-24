@@ -13,7 +13,7 @@ interface ProductsDao {
     @Query("SELECT * FROM products_table ")
     fun shoAllProducts(): LiveData<List<ProductsEntity>>
 
-    @Query("SELECT *FROM products_table WHERE id =:mID")
+    @Query("SELECT * FROM products_table WHERE id =:mID")
     fun showOnProductsBy(mID : Int) : LiveData<ProductsEntity>
 
 }
