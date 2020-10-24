@@ -15,7 +15,7 @@ class ProductsAdapter (var mPasstheData:PasstheData): RecyclerView.Adapter<Produ
 
     //cada vez que haya un cambio actualiza la lista este método se crea
 
-    fun updateFrutos(mStringList: List<ProductsEntity>) {  //paso 2
+    fun updateProducts(mStringList: List<ProductsEntity>) {  //paso 2
 
         mData = mStringList        //paso 2
         notifyDataSetChanged()
