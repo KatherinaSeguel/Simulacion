@@ -1,6 +1,6 @@
 package com.example.simulacion.model.network
 
 
-import com.google.gson.annotations.SerializedName
+//class products : ArrayList<productsItem>()
 
-class products : ArrayList<productsItem>()
+data class products(val products: ArrayList<ProductsItem>)

@@ -11,7 +11,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.simulacion.model.local.ProductsEntity
+
+import com.example.simulacion.model.network.ProductsItem
 import com.example.simulacion.model.viewModel.ProductsAdapter
 import com.example.simulacion.model.viewModel.ProductsViewModel
 import kotlinx.android.synthetic.main.fragment_first.*
@@ -61,7 +62,7 @@ class FirstFragment :Fragment(), ProductsAdapter.PasstheData  {
     }
 
 
-    override fun passTheData(mProd: ProductsEntity) {
+    override fun passTheData(mProd: ProductsItem) {
         val mBundle=Bundle()
 
         mBundle.putInt("id",mProd.id)   //put debe ser int o string según corresponda

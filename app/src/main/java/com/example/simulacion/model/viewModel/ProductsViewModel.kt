@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import com.example.simulacion.model.local.ProductsDataBase
-import com.example.simulacion.model.local.ProductsEntity
+import com.example.simulacion.model.network.ProductsItem
 import com.example.simulacion.model.pojos.ProductsRepository
 
 class ProductsViewModel (application: Application) : AndroidViewModel(application) { //sólo se hereda de la clase ViewModel sin contexto porque no es ROOM(androidViewmodel)
@@ -20,7 +20,7 @@ class ProductsViewModel (application: Application) : AndroidViewModel(applicatio
         mRepository.getDataFromServer( )
     }
     //primer fragmento
-    fun exposeLiveDataFromServer(): LiveData<List<ProductsEntity>> {
+    fun exposeLiveDataFromServer(): LiveData<List<ProductsItem>> {
         return mRepository.allProductsLiveData  //devuelve un Listado de productos observables
 
     }
@@ -28,7 +28,7 @@ class ProductsViewModel (application: Application) : AndroidViewModel(applicatio
     //no lo había hecho
 //segundo fragmanto
     //Este elemento será observado por la vista cuando le pase el Id
-    fun getOneProductskByID(id:Int): LiveData<ProductsEntity> {
+   fun getOneProductskByID(id:Int): LiveData<ProductsItem> {
         return mRepository.getOneProductsByID(id)
     }
 

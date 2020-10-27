@@ -4,9 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.simulacion.model.network.ProductsItem
 
 private const val DATA_BASE_NAME= "products_db"
-@Database(entities=[ProductsEntity::class], version=1 )
+@Database(entities=[ProductsItem::class], version=1 )
 abstract class ProductsDataBase : RoomDatabase(){
 
     //Método para ProductsDao

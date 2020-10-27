@@ -1,10 +1,13 @@
 package com.example.simulacion.model.network
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-data class productsItem(
-    @SerializedName("id")
+@Entity(tableName = "products_table")
+data class ProductsItem(
+    @PrimaryKey
     val id: Int,
     @SerializedName("image")
     val image: String,

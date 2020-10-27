@@ -6,16 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.simulacion.R
-import com.example.simulacion.model.local.ProductsEntity
+
+import com.example.simulacion.model.network.ProductsItem
 import kotlinx.android.synthetic.main.item_list_view.view.*
 
 class ProductsAdapter (var mPasstheData:PasstheData): RecyclerView.Adapter<ProductsAdapter.ProductsViewHolder>() { //paso 4 ,Implementar Recycler View
 
-    private  var mData= emptyList<ProductsEntity>()  //paso 1
+    private  var mData= emptyList<ProductsItem>()  //paso 1
 
     //cada vez que haya un cambio actualiza la lista este método se crea
 
-    fun updateProducts(mStringList: List<ProductsEntity>) {  //paso 2
+    fun updateProducts(mStringList: List<ProductsItem>) {  //paso 2
 
         mData = mStringList        //paso 2
         notifyDataSetChanged()
@@ -79,7 +80,7 @@ class ProductsAdapter (var mPasstheData:PasstheData): RecyclerView.Adapter<Produ
     //esta interface se declara y se ocupa en el primer fragmanto .
     interface PasstheData{
 
-        fun passTheData(mFrut:ProductsEntity)
+        fun passTheData(mFrut:ProductsItem)
     }
 
 
